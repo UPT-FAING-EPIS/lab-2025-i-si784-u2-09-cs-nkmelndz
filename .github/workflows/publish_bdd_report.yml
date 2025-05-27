@@ -1,0 +1,50 @@
+name: Publish BDD Report
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Restore dependencies
+      working-directory: Bank
+      run: dotnet restore 
+
+    - name: Build project
+      working-directory: Bank
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Run tests and generate BDD report
+      working-directory: Bank
+      run: dotnet test --collect:"XPlat Code Coverage"
+
+    - name: Install SpecFlow.Plus.LivingDoc CLI
+      working-directory: Bank
+      run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+
+    - name: Generate LivingDoc report
+      working-directory: Bank
+      run: |
+        export PATH="$PATH:~/.dotnet/tools"
+        livingdoc test-assembly ./Bank.Domain.Tests/bin/Debug/net6.0/Bank.Domain.Tests.dll -t ./Bank.Domain.Tests/bin/Debug/net6.0/TestExecution.json  -o bdd-report/index.html
+
+    - name: Deploy report to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./Bank/bdd-report
+        publish_branch: gh-pages
+        destination_dir: bdd-report
+        keep_files: true
