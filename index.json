@@ -1,0 +1,32 @@
+{
+  "api/Bank.Domain.Cliente.html": {
+    "href": "api/Bank.Domain.Cliente.html",
+    "title": "Class Cliente | Bank.Domain",
+    "summary": "Class Cliente Namespace Bank.Domain Assembly Bank.Domain.dll Representa un cliente del banco. public class Cliente Inheritance object Cliente Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties IdCliente Identificador único del cliente. public int IdCliente { get; } Property Value int NombreCliente Nombre completo del cliente. public string NombreCliente { get; } Property Value string Methods Registrar(string) Crea una nueva instancia de cliente con el nombre especificado. public static Cliente Registrar(string _nombre) Parameters _nombre string Nombre del cliente. Returns Cliente Instancia de Cliente."
+  },
+  "api/Bank.Domain.CuentaAhorro.html": {
+    "href": "api/Bank.Domain.CuentaAhorro.html",
+    "title": "Class CuentaAhorro | Bank.Domain",
+    "summary": "Class CuentaAhorro Namespace Bank.Domain Assembly Bank.Domain.dll Representa una cuenta de ahorro de un cliente. public class CuentaAhorro Inheritance object CuentaAhorro Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields ERROR_MONTO_MENOR_IGUAL_A_CERO Mensaje de error cuando el monto es menor o igual a cero. public const string ERROR_MONTO_MENOR_IGUAL_A_CERO = \"El monto no puede ser menor o igual a 0\" Field Value string Properties Estado Indica si la cuenta está activa o cancelada. public bool Estado { get; } Property Value bool FechaApertura Fecha de apertura de la cuenta. public DateTime FechaApertura { get; } Property Value DateTime IdCuenta Identificador único de la cuenta. public int IdCuenta { get; } Property Value int IdPropietario Identificador del cliente propietario. public int IdPropietario { get; } Property Value int NumeroCuenta Número único de la cuenta. public string NumeroCuenta { get; } Property Value string Propietario Cliente propietario de la cuenta. public virtual Cliente Propietario { get; } Property Value Cliente Saldo Saldo actual de la cuenta. public decimal Saldo { get; } Property Value decimal Tasa Tasa de interés anual aplicada a la cuenta. public decimal Tasa { get; } Property Value decimal Methods Aperturar(string, Cliente, decimal) Crea una nueva cuenta de ahorro para un cliente. public static CuentaAhorro Aperturar(string _numeroCuenta, Cliente _propietario, decimal _tasa) Parameters _numeroCuenta string Número de cuenta. _propietario Cliente Cliente propietario. _tasa decimal Tasa de interés. Returns CuentaAhorro Instancia de CuentaAhorro. Cancelar() Cancela la cuenta, desactivando su estado. public void Cancelar() Depositar(decimal) Deposita un monto a la cuenta. public void Depositar(decimal monto) Parameters monto decimal Monto a depositar. Debe ser mayor que cero. Exceptions Exception Si el monto es menor o igual a cero. Retirar(decimal) Retira un monto de la cuenta. public void Retirar(decimal monto) Parameters monto decimal Monto a retirar. Debe ser mayor que cero. Exceptions Exception Si el monto es menor o igual a cero."
+  },
+  "api/Bank.Domain.html": {
+    "href": "api/Bank.Domain.html",
+    "title": "Namespace Bank.Domain | Bank.Domain",
+    "summary": "Namespace Bank.Domain Classes Cliente Representa un cliente del banco. CuentaAhorro Representa una cuenta de ahorro de un cliente."
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | Bank.Domain",
+    "summary": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | Bank.Domain",
+    "summary": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "\uD83D\uDCD8 Documentación del Proyecto Calculator | Bank.Domain",
+    "summary": "\uD83D\uDCD8 Documentación del Proyecto Calculator ¡Bienvenido! Esta es la documentación técnica del proyecto Calculator, donde encontrarás detalles sobre la arquitectura, las clases principales, los métodos implementados y las pruebas de comportamiento (BDD). \uD83D\uDCC2 Secciones disponibles \uD83E\uDDE9 Documentación de la biblioteca principal (Calculator.Domain): Explicación de las clases y componentes del dominio. \uD83D\uDEE0️ Esta documentación fue generada automáticamente con DocFX."
+  }
+}
