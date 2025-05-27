@@ -1,0 +1,33 @@
+name: Publish Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x" # O la versión que uses
+
+      - name: Init DocFx
+        run: dotnet tool update -g docfx
+
+      - name: Generar metadata
+        run: docfx metadata Bank/docfx.json
+
+      - name: Build DocSite
+        run: docfx build Bank/docfx.json
+
+      - name: Publicar en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: Bank/_site
