@@ -27,6 +27,6 @@
   "index.html": {
     "href": "index.html",
     "title": "\uD83D\uDCD8 Documentación del Proyecto Calculator | Bank.Domain",
-    "summary": "\uD83D\uDCD8 Documentación del Proyecto Calculator ¡Bienvenido! Esta es la documentación técnica del proyecto Calculator, donde encontrarás detalles sobre la arquitectura, las clases principales, los métodos implementados y las pruebas de comportamiento (BDD). \uD83D\uDCC2 Secciones disponibles \uD83E\uDDE9 Documentación de la biblioteca principal (Calculator.Domain): Explicación de las clases y componentes del dominio. \uD83D\uDEE0️ Esta documentación fue generada automáticamente con DocFX."
+    "summary": "\uD83D\uDCD8 Documentación del Proyecto Calculator ¡Bienvenido! Esta es la documentación técnica del proyecto Calculator, donde encontrarás detalles sobre la arquitectura, las clases principales, los métodos implementados y las pruebas de comportamiento (BDD). \uD83D\uDCC2 Secciones disponibles \uD83E\uDDE9 Documentación de la biblioteca principal (Calculator.Domain): Explicación de las clases y componentes del dominio. \uD83E\uDDE9 Documentación de la biblioteca principal (Calculator.Domain): Explicación de las clases y componentes del dominio. \uD83D\uDEE0️ Esta documentación fue generada automáticamente con DocFX."
   }
 }
